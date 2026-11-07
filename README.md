@@ -2,6 +2,13 @@
 
 一个为微信内打开而做的移动端情书网页。页面是纯静态单页，不加载第三方图片、字体或统计脚本。
 
+## 在线访问
+
+- 直接打开或发到微信：<https://ace5447180.github.io/lidong-siyi/>
+- GitHub 仓库：<https://github.com/ACE5447180/lidong-siyi>
+
+页面已经通过 GitHub Pages 发布。之后只要把更新推送到 `main` 分支，GitHub Pages 就会自动重新构建。
+
 ## 本地预览
 
 直接双击 `index.html` 即可查看。页面也包含以下互动：
@@ -11,9 +18,9 @@
 - 点击“解冻它”，打开藏在霜面下面的情书。
 - 点击“把手给我”，进入最终告白并收起一句可复制的文案。
 
-## 发到微信
+## 微信分享
 
-微信不能直接打开电脑本地文件，所以需要把网页部署到支持 HTTPS 的静态托管服务。上传时保持以下三个文件在同一目录：
+微信不能直接打开电脑本地文件，因此页面已经部署到支持 HTTPS 的 GitHub Pages。发布时保持以下三个文件在同一目录：
 
 ```text
 index.html
@@ -21,19 +28,13 @@ share-cover.png
 favicon.svg
 ```
 
-可选用 GitHub Pages、Cloudflare Pages 或 Netlify Drop 等静态托管服务。部署完成后，直接在微信里发送生成后的 HTTPS 链接即可。
-
-部署后如果希望微信分享卡片显示自定义缩略图，请把 `index.html` 里的这一行：
+微信分享卡片使用的缩略图已经配置为完整公网地址：
 
 ```html
-<meta property="og:image" content="share-cover.png">
+<meta property="og:image" content="https://ace5447180.github.io/lidong-siyi/share-cover.png">
 ```
 
-改成完整公网地址，例如：
-
-```html
-<meta property="og:image" content="https://你的域名/share-cover.png">
-```
+直接在微信里发送在线访问地址即可。微信有时会缓存旧分享卡片，如果刚更新页面没有显示新缩略图，可以稍等几分钟再分享。
 
 ## 调整文案
 
